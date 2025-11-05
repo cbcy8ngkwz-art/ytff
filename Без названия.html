@@ -1,0 +1,522 @@
+
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJ8J5G9');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="google-site-verification" content="4-UGTSds8HSbdOM-bmQbMfAW2EraYxFDnNodlP9f9uk" />
+    <script type="text/javascript">
+        function redirect(){
+            if (location.hash && location.hash.startsWith('#filter')) window.location = "/courses/redirect"+location.hash
+        }
+        redirect();
+        window.onhashchange = redirect;
+        
+    </script>
+    <title>
+Разделы биологии
+</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#40e1b8">
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <!--<meta name="facebook-domain-verification" content="afdlp4yly3m2xdg9m1kvzifr8mjdyq" />-->
+    <meta name="yandex-verification" content="99f6646c967bb623" />
+    
+    
+    <!-- <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" rel="stylesheet"> -->
+    <script crossorigin="anonymous" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="/static/css/main.css"> -->
+    
+    <link href="/static/scss/courses.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/fontawesome-free-6.6.0-web/css/all.min.css">
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function () {
+                setTimeout(()=>{
+                    $(this).find(':submit').prop('disabled', true);
+                })
+            });
+            $('form').bind('invalid-form.validate', function () {
+                $(this).find(':submit').prop('disabled', false);
+            });
+        });
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript">
+    
+    function taskResize() {
+        //counting iframe inner content height and setting iframe size
+        let contentHeight
+        if ( $('#contentIframe').contents().find('.taskArea').length ){
+            contentHeight = $('#contentIframe').contents().find('.taskArea').height()
+        }
+        else if ( $('#contentIframe').contents().find('#fieldWrapper').length ){
+            contentHeight = $('#contentIframe').contents().find('#fieldWrapper').height()
+        }
+        else {
+            contentHeight = $('#contentIframe').contents().find('body').height()
+        }
+        //if (!$('#contentIframe')[0].hasAttribute('height')) {
+            $('#contentIframe').height(contentHeight)
+        //}
+        
+        //setting scale
+        if($('#contentIframe').hasClass('app-scale')){
+            let zoom = $('#taskWrapper').width()/1024;
+            if(zoom < 1){
+                $('#contentIframe').css('transform', 'scale('+zoom+')')
+                .css('-webkit-transform', 'scale('+zoom+')')
+                .css('-o-transform', 'scale('+zoom+')')
+                .css('-ms-transform', 'scale('+zoom+')')
+                .css('-moz-transform', 'scale('+zoom+')')
+                .css('transform-origin', 'top left')
+                .css('-webkit-transform-origin', 'top left')
+                .css('-o-transform-origin', 'top left')
+                .css('-ms-transform-origin', 'top left')
+                .css('-moz-transform-origin', 'top left');
+                
+                
+                $('#taskWrapper').height(contentHeight*zoom);
+                
+            };
+        }
+    }
+        
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function spinnerOn(){
+        $('#spinner').removeClass('d-none').addClass('d-flex'); //spinner on
+        
+        $('#contentIframe').on('load', function(){
+            taskResize();
+            spinnerOff();
+        });
+        
+        $("#main-content img").on('load', function(){
+            spinnerOff();
+        })
+        
+        
+    }
+
+    function spinnerOff(){
+        $('#spinner').removeClass('d-flex').addClass('d-none'); //spinner off
+    }
+    </script>
+    
+    
+    <style>
+        #main-content img {
+            max-height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+    
+    var pageLoaded = false
+    
+/////////////
+//DOM ready//
+/////////////
+    $( document ).ready(function(){
+            
+        if(!pageLoaded){
+            //spinner
+            spinnerOn()
+            pageLoaded = true
+        }
+    })
+    
+///////////////
+//Window load//
+///////////////
+    $( window ).on( "load", function() { 
+        //$('#spinner').removeClass('d-flex').addClass('d-none'); //spinner off
+        pageLoaded = true;
+        spinnerOff();
+        $("#menu").animate({ scrollTop: $(".active-icon").offset().top - $(window).height()/2 + 56*1.5 }, 500);
+    })
+    
+    function setButtons(){
+    }
+	
+//////////////
+////Resize////
+//////////////	
+	$( window ).resize(function(){
+		taskResize()
+	});
+</script>
+
+
+
+</head>
+
+<body>
+    
+    <!-- start плагин для слабовидящих вариант 1 - BVI -->
+        <link href="/static/visually_impaired_plugins/button-visually-impaired-javascript-master/dist/css/bvi.css" rel="stylesheet">
+        <!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script -->
+        <script src="/static/visually_impaired_plugins/button-visually-impaired-javascript-master/dist/js/bvi.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                new isvek.Bvi({
+                    target: '.bvi-open',
+                    fontSize: 24,
+                });
+            });
+        </script>
+    <!-- end плагин для слабовидящих вариант 1 - BVI -->
+
+    
+
+    <style>
+    body .custom-bvi-button {
+        display: block;
+        line-height: 1.5;
+        font-size: 0.875rem !important;
+        
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        
+        border: 1px solid #c6c6c6 !important;
+        border: 1px solid #0e5ec6 !important;
+        padding: 0.375rem 0.75rem !important;
+        border-radius: 0.25rem !important;
+        position: relative;
+        font-weight: bold;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        position: fixed !important;
+        top: 1.05rem !important;
+        right: 3.5rem !important;
+        z-index: 999999 !important;
+    }
+    </style>
+
+
+    <!-- start плагин для слабовидящих вариант 1 - BVI -->
+        <button type="button" class="custom-bvi-button btn-secondary text-white bvi-open"><i class="bvi-images bvi-images-eye-white bvi-images-size-32 bvi-no-styles bvi-background-image"></i></button>
+        
+    <!-- end плагин для слабовидящих вариант 1 - BVI -->
+    
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(46556604, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46556604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ8J5G9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    
+
+
+    
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        
+        <!-- left col -->
+        <div class="col-4 col-lg-3 col-xl-2 overflow-auto vh-100 border-right" id="menu">
+            <div class="row">
+                <!-- top card -->
+                
+
+<div class="col-12"  id="card-top">
+    <div style="height:75px" class="w-100 border-bottom">
+        <a href="/courses/"><img src="/static/img/din.courses.svg" class="py-3 mw-100 mh-100"></a>
+    </div>
+    <h6 class="mb-0 mt-3"><a href="/courses/#3" class="">Биология</a></h6>
+    <h5><a href="../../" class="">Основы биологии для средней школы. Часть 1</a></h5>
+     
+    <!-- prev lesson -->
+    
+     <hr>
+    <!-- current lesson -->
+     <a href="../../1">Текущий урок:<br/>Биология как наука</a><br>
+</div>
+                
+                <!-- steps -->
+                
+
+                    
+                    <a href="../1/" class="text-reset text-decoration-none d-block col-12 step-desktop-steplink" title="Биология как наука">
+                        <!-- <div class=""> -->
+                            <div class="row align-items-center">
+                                <!-- icon -->
+                                <div class="col-3 p-0 step-icon my-2 ">
+                                    <div class="align-middle step-icon">
+        <div style="width:40px; height:40px; background: url('/static/img/video-icon.svg') center/50% no-repeat;" class="icon  rounded-circle mx-auto"></div>
+</div>
+                                </div>
+                                
+                                <!-- name -->
+                                <div class="col-9 step-name py-2 my-2" >
+                                        Биология как наука
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </a>
+                    
+                    <a href="../2/" class="text-reset text-decoration-none d-block col-12 step-desktop-steplink" title="Признаки живого">
+                        <!-- <div class=""> -->
+                            <div class="row align-items-center">
+                                <!-- icon -->
+                                <div class="col-3 p-0 step-icon my-2 ">
+                                    <div class="align-middle step-icon">
+        <div style="width:40px; height:40px; background: url('/static/img/pager-icon.svg') center/50% no-repeat;" class="icon  rounded-circle mx-auto"></div>
+</div>
+                                </div>
+                                
+                                <!-- name -->
+                                <div class="col-9 step-name py-2 my-2" >
+                                        Признаки живого
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </a>
+                    
+                    <a href="../3/" class="text-reset text-decoration-none d-block col-12 step-desktop-steplink" title="Разделы биологии">
+                        <!-- <div class=""> -->
+                            <div class="row align-items-center">
+                                <!-- icon -->
+                                <div class="col-3 p-0 step-icon my-2 active-icon">
+                                    <div class="align-middle step-icon">
+        <div style="width:40px; height:40px; background: url('/static/img/pager-icon-white.svg') center/50% no-repeat;" class="icon active rounded-circle mx-auto"></div>
+</div>
+                                </div>
+                                
+                                <!-- name -->
+                                <div class="col-9 step-name py-2 my-2" >
+                                        Разделы биологии
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </a>
+                    
+                    <a href="../4/" class="text-reset text-decoration-none d-block col-12 step-desktop-steplink" title="Зачем изучать биологию">
+                        <!-- <div class=""> -->
+                            <div class="row align-items-center">
+                                <!-- icon -->
+                                <div class="col-3 p-0 step-icon my-2 ">
+                                    <div class="align-middle step-icon">
+        <div style="width:40px; height:40px; background: url('/static/img/pager-icon.svg') center/50% no-repeat;" class="icon  rounded-circle mx-auto"></div>
+</div>
+                                </div>
+                                
+                                <!-- name -->
+                                <div class="col-9 step-name py-2 my-2" >
+                                        Зачем изучать биологию
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </a>
+                    
+                    <a href="../5/" class="text-reset text-decoration-none d-block col-12 step-desktop-steplink" title="Биология как наука">
+                        <!-- <div class=""> -->
+                            <div class="row align-items-center">
+                                <!-- icon -->
+                                <div class="col-3 p-0 step-icon my-2 ">
+                                    <div class="align-middle step-icon">
+        <div style="width:40px; height:40px; background: url('/static/img/task-icon.svg') center/50% no-repeat;" class="icon  rounded-circle mx-auto"></div>
+</div>
+                                </div>
+                                
+                                <!-- name -->
+                                <div class="col-9 step-name py-2 my-2" >
+                                        Биология как наука
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    </a>
+                    
+                
+                
+                <!-- bottom card -->
+                <div class="pb-3 col-12"  id="card-bottom">
+    <!-- next lesson -->
+    
+        <hr>
+        <a href="../../2/1/" class="push_link" title="Методы изучения живой природы">Следующий урок:<br/>Методы изучения живой природы</a>
+    
+    
+        <hr>
+        <b>Материалы для скачивания:</b>
+        
+            <a href="/media/lessons_files/KOT_1_teach-01_Hb2vVnz.pdf" class="py-4 row align-items-center text-decoration-none file-link" target="_blank">
+                
+                    <div style="width:40px"><svg width="40" class="svg-fill-primary" mlns="http://www.w3.org/2000/svg" viewBox="0 0 39.78 19.56"><defs><style>.cls-1{fill:#1f90a6;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2px;}.cls-3{fill:#1f98ae;}</style></defs><title>dwnld_solid</title><ellipse class="cls-1" cx="20" cy="9.78" rx="10" ry="9.78"/><line class="cls-2" x1="20" y1="3.47" x2="20" y2="15.18"/><polyline class="cls-2" points="25.73 11.1 20 15.35 14.26 11.1"/><ellipse class="cls-3" cx="20" cy="9.78" rx="10" ry="9.78"/><polyline class="cls-2" points="24.22 10.31 20 14.54 15.78 10.31"/><line class="cls-2" x1="20" y1="5.24" x2="20" y2="14.35"/></svg></div>
+                    <div style="width:50px">
+                        <div class="file-type-icon badge badge-primary text-white">
+                            
+                                pdf
+                            
+                        </div>
+                    </div>
+                    <div class="col p-0">Презентация для учителей </div>
+                
+            </a>
+        
+            <a href="/media/lessons_files/KOT_1_%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BE%D1%87%D0%BD%D0%B0%D1%8F.pdf" class="py-4 row align-items-center text-decoration-none file-link" target="_blank">
+                
+                    <div style="width:40px"><svg width="40" class="svg-fill-primary" mlns="http://www.w3.org/2000/svg" viewBox="0 0 39.78 19.56"><defs><style>.cls-1{fill:#1f90a6;}.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2px;}.cls-3{fill:#1f98ae;}</style></defs><title>dwnld_solid</title><ellipse class="cls-1" cx="20" cy="9.78" rx="10" ry="9.78"/><line class="cls-2" x1="20" y1="3.47" x2="20" y2="15.18"/><polyline class="cls-2" points="25.73 11.1 20 15.35 14.26 11.1"/><ellipse class="cls-3" cx="20" cy="9.78" rx="10" ry="9.78"/><polyline class="cls-2" points="24.22 10.31 20 14.54 15.78 10.31"/><line class="cls-2" x1="20" y1="5.24" x2="20" y2="14.35"/></svg></div>
+                    <div style="width:50px">
+                        <div class="file-type-icon badge badge-primary text-white">
+                            
+                                pdf
+                            
+                        </div>
+                    </div>
+                    <div class="col p-0">Проверочная работа </div>
+                
+            </a>
+        
+    
+        
+    
+    
+        <hr>
+        
+            <a href="http://президентскиегранты.рф" class="text-decoration-none" target="_blank">
+                <p class="small text-muted">Проект реализуется при поддержке Фонда президентских грантов</p>
+            </a>
+        
+            <a href="https://sch-int.ru/" class="text-decoration-none" target="_blank">
+                <p class="small text-muted">В содружестве со школой «Интеллектуал»</p>
+            </a>
+        
+    
+    
+</div>
+            </div>
+        </div>
+        
+        <!-- right col -->
+        <div class="col-8 col-lg-9 col-xl-10">
+            <!-- header -->
+            
+<div id="header" class="w-100 d-flex text-center align-items-center position-sticky bg-white " style="z-index: 999; top: 0; height: 75px">
+    
+    
+    
+    <!-- prev -->
+    <div style="width: 50px" class="">
+        <a href="../2/" class="push_link step-button text-reset text-decoration-none" title="Признаки живого">
+            <img src="/static/img/prev-step.png" width="100%" style="max-width: 15px;"/>
+        </a>
+    </div>
+    
+    <!-- title -->
+    <div class="col overflow-hidden step-title"><h1 class="h-100 py-2 lead w-100">Разделы биологии</h1></div>
+    <!-- next -->
+    <div style="width: 50px" class="">
+        <a href="../4/" class="push_link step-button text-reset text-decoration-none" title="Зачем изучать биологию">
+            <img src="/static/img/next-step.png" width="100%" style="max-width: 15px;"/>
+        </a>
+    </div>
+    
+</div>
+            
+            <!-- main -->
+            <div class="row overflow-auto border-top " style="height: calc(100vh - 75px)">
+                                <div id="main-content" class="h-100 mh-100 col-12 col-xl-10 offset-xl-1 p-0 p-xl-5">
+                        
+                            
+                            
+                                <a href = "#" data-toggle="modal" data-target="#full-image" style="cursor: zoom-in">
+                                    <img src="/media/pagers/kot/lesson_1_s4/KOT_1-02.png" class="mw-100 mx-auto d-block"/>
+                                </a>
+
+                                
+                                <div id="full-image" class="modal overflow-auto fade p-0">
+                                    <div class="modal-dialog my-0" role="document" style="width:fit-content; max-width:fit-content">
+                                        <div class="modal-content rounded-0">
+                                            <a href="#" data-dismiss="modal" style="cursor: zoom-out">
+                                                <img src="/media/pagers/kot/lesson_1_s4/KOT_1-02.png"class="d-block mx-auto"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                    
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+
+<!-- SPINNER -->
+<div class="vh-100 vw-100 position-fixed justify-content-center align-items-center d-none" style="top:0;left:0; z-index:999; background-color: rgba(255,255,255,0.8)" id="spinner">
+    <div class="spinner-border text-primary" role="status" style="width: 8rem; height: 8rem;">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+
+
+
+
+
+
+    
+
+    <!-- RoiStat counter -->
+    <script>
+        (function(w, d, s, h, id) {
+            w.roistatProjectId = id; w.roistatHost = h;
+            var p = d.location.protocol == "https:" ? "https://" : "http://";
+            var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+            var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com', '4a63676450e37a59e1217ed3dc0ac9b9');
+    </script>
+    <!-- /RoiStat counter -->
+</body>
+
+</html>
+
